@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const jwtSecret = "AnimeshJwt@Secret";
+const jwtSecret = "SarikaJwt@Secret";
 const User = require('../models/User');
 // const jwtSecret = process.env.REACT_APP_JWT_SECRET;
 

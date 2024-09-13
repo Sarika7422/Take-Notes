@@ -8,7 +8,7 @@ const { body, validationResult } = require('express-validator');
 const { flushSync } = require('react-dom');
 
 // const jwtSecret = process.env.REACT_APP_JWT_SECRET;
-const jwtSecret = 'AnimeshJwt@Secret';
+const jwtSecret = 'SarikaJwt@Secret';
 // console.log("Secret code : "+jwtSecret);
 
 let success = true;
