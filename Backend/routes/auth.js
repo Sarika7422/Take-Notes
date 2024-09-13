@@ -9,7 +9,7 @@ const { flushSync } = require('react-dom');
 
 // const jwtSecret = process.env.REACT_APP_JWT_SECRET;
 const jwtSecret = 'AnimeshJwt@Secret';
-console.log("Secret code : "+jwtSecret);
+// console.log("Secret code : "+jwtSecret);
 
 let success = true;
 
