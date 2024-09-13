@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import modeContext from '../Context/Dark_lightMode/modeContext';
 
 export default function Signup(props) {
-  const signupUrl = process.env.REACT_APP_SIGNUP_URL;
+  const signupUrl = import.meta.env.VITE_SIGNUP_URL;
+
   console.log("signup url : ", signupUrl);
 
   const [credential, setcredential] = useState({ name: "", email: "", password: "", cpassword: "" });

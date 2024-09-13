@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import modeContext from '../Context/Dark_lightMode/modeContext';
 
 export default function Login(props) {
-    const loginUrl = process.env.REACT_APP_LOGIN_URL;
+    const loginUrl = import.meta.env.VITE_LOGIN_URL;
+    console.log("login : ", loginUrl);
+
     const [credential, setcredential] = useState({ email: "", password: "" });
     const navigate = useNavigate();
     // console.log("mode : ",mode);

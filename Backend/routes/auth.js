@@ -20,7 +20,7 @@ let success = true;
 
 // Router = 1 : Create a user ussing post "api/auth/". Doesn't require authentication.
 router.post('/createuser',[body('name','Enter a valid name').isLength({min:3}),body('email','Enter a valid email.').isEmail(),body('password','Password must be at least 5 characters.').isLength({min:5}) ], async(req,res)=>{
-    console.log(req.body);
+    // console.log(req.body);
 
     const result = validationResult(req);
     if (!result.isEmpty()) {
@@ -49,9 +49,9 @@ router.post('/createuser',[body('name','Enter a valid name').isLength({min:3}),b
         const data = {
             user:user.id
         }
-        console.log("Secret code : "+jwtSecret);
+        // console.log("Secret code : "+jwtSecret);
         const authToken = jwt.sign(data,jwtSecret);
-        console.log("Token : "+authToken);
+        // console.log("Token : "+authToken);
 
         //Sending response as successfully entered data into the data base msg.
         success = true;
@@ -118,7 +118,7 @@ router.post('/login',[body('email','Enter a valid email.').isEmail(),body('passw
 router.post('/getuser',fetchuser,async(req,res)=>{
     try {
         const user =req.user;//Getting the user id set by the fetchUser middleware in req field.
-        console.log(user);
+        // console.log(user);
         res.json(user);
     } catch (error) {
         console.log(error);
